@@ -1,0 +1,397 @@
+/*
+// 1) Write a function named makeQuestion, that takes three arguments:
+//  two operands and an operator, and returns a string with the question 
+// "What is [oprd1] [opr] [oprd2]?".
+
+function makeQuestion(oprd1 ,opr, oprd2) {
+    let question = "What is";
+    let result = console.log(question +" "+ oprd1 + " "+ opr+ " " + oprd2 + "?");
+
+    return result;
+}
+
+makeQuestion(4, '*', 8);
+ */
+
+/*
+// 2) Make an object assign 3 different keys to it by 3 different
+//  ways that we have learned;
+
+
+
+let object = {};
+// first version
+object.name = "argam";
+
+// //second version
+object["age"] = 24;
+
+// //third version
+Object.defineProperty(object, "surname", { value: "0654564"});
+//writable can be false but false version we can't change value
+
+//fourth version
+let oldestAge = "hobi";
+object[oldestAge] = "codeing";
+
+console.log(object[oldestAge]);
+console.log(object);
+
+*/
+/* 
+// 3) Find the odd one out in the provided array. 
+// All array elements are equal, except one. 
+// Your function must return this odd one out. ->
+// *    ["a", "a", "b", "a"] -> // 'b';
+
+
+let strArray = ["a", "a", "b", "a","b",'c','z','c'];
+function removeDublicateItems(array,item) {
+    let odd ;
+    root:for (let i = 1; i < array.length; i++) {
+        for (let j = 0; j < array.length; j++) {
+            if (i !== j && array[i] === array[j]) {
+                continue root;
+            }
+            
+        }
+        item = array[i]
+    }
+    return odd = item
+}
+
+console.log(removeDublicateItems(strArray));
+*/
+
+/*
+// 4) Deduce the smallest and the largest number from the supplied
+//  numeric array. Return an array containing these numbers, 
+// smallest number first.
+// *    [14, 28, 3, 8, 2] -> [2, 28];
+let array = [14, 28, 3, 8, 2];
+
+function Deduce(array) {
+    let min = array[0];
+    let max = array[0];
+    
+    let containing = [];
+    for (let i = 1; i < array.length; i++) {
+
+        if (min > array[i]) {
+            min = array[i];
+        }
+        if (max < array[i]) {
+            max = array[i];
+        }
+        
+    };
+    containing.push(max);
+    containing.push(min);
+    return containing;
+}
+
+console.log(Deduce(array));
+*/
+
+/*
+// 5) Write a function to separate a single array in to two separate arrays.
+// *    The supplied array will only contain numeric values. Your function should output two arrays:
+// *     one containing odd numbers, the other containing even numbers.
+
+
+let containedArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function containedNumbers (containedArray) {
+    let odd= [];
+    let even = [];
+    for (let i = 0; i < containedArray.length; i++) {
+        if (containedArray[i] % 2 === 0) even.push(containedArray[i]);
+        else odd.push(containedArray[i]);
+    }
+    
+    let result = [odd, even]
+    return result;
+    return {
+        odd, even
+    }
+}
+console.log(containedNumbers(containedArray));
+*/
+
+/* 
+// 6) In this JavaScript array exercise, the supplied array
+//  may contain duplicate values. Write a function
+// *    to return only unique values — values that only occur 
+// exactly one time within the provided array.
+// *    [1, 1, 2, 3, 3, 4, 4, 5] -> [2, 5];
+
+
+
+let numArray = [1, 1, 2, 3, 3, 4, 4, 5,45];
+function removeDublicateItems(array) {
+    let notRepeted = [] ;
+    root:for (let i = 1; i < array.length; i++) {
+        for (let j = 0; j < array.length; j++) {
+            if (i !== j && array[i] === array[j]) {
+                continue root;
+            }
+            
+        }
+        let item = array[i]
+        notRepeted.push(item)
+    }
+    return notRepeted
+}
+
+console.log(removeDublicateItems(numArray));
+*/
+
+/**
+ * 7) Your function must accept 2 arrays, then return the common words
+ * from each.
+ *    arr1 ["dog", "cat", "parrot"] arr2 ["lizard", "rat", "cat"] -> ["cat"]
+ let arr1 = ["dog", "cat", "parrot"];
+ let arr2 = ["lizard", "rat", "cat"];
+ 
+ function commonWords(a, b) {
+     let common = [];
+     if (arr1.length !== arr2.length) return 'you are not have a common words'
+    for (let i = 0; i < a.length; i++) {
+        for (let j = 0; j < b.length; j++) {
+            if (a[i] !== b[j]) {
+                continue;
+            }
+            common.push(a[i])
+        }
+    }
+    
+    return common;
+}
+console.log(commonWords(arr1, arr2));
+* */
+
+/**
+ * 8) Write a function to accept two arrays.
+ * Does the first array contain all elements represented in 
+ * the second array?
+ *    arr1["monday", "tuesday"] , arr2 ["tuesday"] -> false;
+ 
+ let arr1 = ["monday", "tuesday",8];
+ let arr2 = ["tuesday",8,"monday"];
+ function representedElements(arr1, arr2) {
+     let boolean = false;
+     let commonWords = 0;
+     for (let i = 0; i < arr1.length; i++) {
+         for (let j = 0; j < arr2.length; j++) {
+             if (arr1[i] === arr2[j]) {
+                 commonWords++;
+                }
+            }
+        }
+        if (commonWords === arr1.length) boolean = true;
+        return boolean;
+    }
+    console.log(
+        representedElements(arr1, arr2)
+        );
+        */
+
+/**
+ * 9) The supplied array will contain both numeric and non-numeric
+ * characters.Return a new array where all numeric values are
+ * positioned at the beginning of the array,
+ *    ["b", 6, "a", "q", 7, 2] -> [2, 6, 7, "a", "b", "q"]
+ 
+ let array = ["b", 6, "a", "q", 7, 2];
+ 
+ function sortArray(array) {
+     let returnArray = [];
+     for (let i = 0; i < array.length; i++) {
+         let tester = array[i];
+         if (typeof tester === typeof 1) {
+             returnArray.unshift(array[i]);
+            }
+            if (typeof tester === typeof "dnbn") {
+                returnArray.push(array[i]);
+            }
+        }
+        return returnArray;
+    }
+    console.log(sortArray(array));
+    * */
+
+/**
+ * 10) From the first array, construct a new array based
+ * on the indexes supplied.
+ *      ["mon", "tue", "wed", "thur", "fri"] -> [1, 3, 4];
+ 
+ function Indexes(weakDays) {
+     let indexOfDays = [];
+     for (let i = 0; i < weakDays.length; i++) {
+         if (i === 0 || i === 2) continue;    
+         else indexOfDays.push(i);
+         // indexOfDays.push(weakDays[i]);
+         
+        }
+        return indexOfDays
+    }
+    let weakDays = ["mon", "tue", "wed", "thur", "fri"];
+    function Indexes(weakDays) {
+        let indexOfDays = [];
+        let index = [1, 3, 4];
+        for (let i = 0; i < weakDays.length; i++) {
+            for (let j = 0; j < index.length; j++) {
+                if (index[j] === i) indexOfDays.push(index[j])
+            }
+        }
+        return indexOfDays;
+    }
+    console.log(Indexes(weakDays));
+    */
+/**
+ * 11) This one is a classic. Simply reverse the string without using reverse(). 'abcd' -> 'dcba';
+ let str = "abcd";
+ function Revers (str) {
+     let y = '';
+     for (let i = str.length-1; i >= 0; i--) {
+         y += str[i]
+        }
+        return y
+    }
+    
+    console.log(Revers(str));
+    */
+
+// ADVANCED
+
+// 1)
+
+/*
+*
+* grel funkciya vore vorpes argument stanum e erku zangvats, 
+* zangvatsneric meke kochvum estrings myuse lookups vore kveradardzni 
+* array vorum nerarvats klnien te lookup arrayi miji andamneric
+* amen meke qani angam ka strings array um
+*
+* orinak
+*
+* const lookup = ['i', 'love', 'sadakhlo', 'esminich']
+* const strings = ['i', 'i', 'sadakhlo', 'i'];
+*
+*
+*
+* foo(lookup, strings)  kveradardzni [3, 0, 1, 0]
+*
+* QANI VOR 'i'-e  krknvuma 3 angam 'love'- e 0, 'sadakhlo'-n 1 angam isk 'esminch' - e 3;
+*
+*
+
+
+const lookup = ['i', 'love', 'sadakhlo', 'esminich'];
+const strings = ['i', 'i', 'sadakhlo', 'i'];
+
+function replyedElem (lookup, strings) {
+    let repetedItem = [];
+    for (let i = 0; i < lookup.length; i++) {
+        let counter = 0;
+        for (let j = 0; j < strings.length; j++) {
+            if (lookup[i] === strings[j]) counter++
+        }
+        repetedItem.push(counter)
+    }
+    return repetedItem
+    
+}
+console.log(replyedElem (lookup, strings));
+* */
+
+/*
+*
+*
+*
+*  2) grel funkcia vore kstana vorpes argument array kazmvac 4 hat tvic
+* orinak [1,2,3,4] kveradardzni object vore kunena erku hat key voronq
+* klinen hamapatasxanabar arrayum gtnvox tveric 4 ic 3 i amenapoqr
+* gumare ev nayev amenamec gumare
+*
+*
+* ORINAK [1,2,3,4] i  depqum kveradardzni  object { max: 9, min : 6 }
+* qani vor tveric amenamecere tvyal depqum 2+3+4 = 9 isk amenapoqere 
+* irar gumareluc
+* kstacvi 1+2+3 = 6;
+
+let numbers = [1, 3, 2, 4];
+
+function sumOfItems(numbers) {
+    let min = numbers[0];
+    let max = numbers[0];
+    let sum = 0;
+    for(let i = 0; i < numbers.length; i++) {
+        if (min > numbers[i]) {
+            min = numbers[i];
+        }
+        if (max < numbers[i]) {
+            max = numbers[i];
+        }
+        sum += numbers[i];
+    };
+    let object = {};
+    object.max = sum - min;
+    object.min = sum - max;
+    return object;
+}
+
+console.log(sumOfItems(numbers));
+* */
+
+/*3)
+ * Grel funkciya vore kndhuni vorpes argument array vortex klini tver
+ * voronq bolore kkrknven erku angam baci mi hatic
+ * Petka gtnel er veradardznel ayd chkrknvox tive
+ *
+ *
+ * ORINAK [1,2,2,1,3,4,4,3,5] i  depqum kveradardzni 5 qani vor 5 e
+ * chi krknvum;
+ * */
+
+/* 4)
+ * trvats e qarakusi matric vore baxkacac e tveric
+ * petk e aj ankyunagcov hamapatasxanabar tvere gumarel irar
+ *
+ *               1 2 3
+ *               4 5 6
+ *               7 8 9
+ *
+ *
+ *
+ *   ays depqum aj ankyunagic e hamarvum 1 > 5 > 9;
+ *
+ *   kstacvi 15
+ *
+ *   foo([1,2,3,4,5,6,7,8,9]) petk e het veradardzni ->  15
+ *
+ *  xndrumem nkatel vor matric e kara lini tarber length i bayc
+ *  misht qarakusi
+ *
+ *
+ *   1 2 3 4
+ *   5 6 7 8
+ *   9 10 11 12
+ *   13 14 15 16
+
+let array = [1, 2, 3, 
+    4, 5, 6, 
+    7, 8, 9];
+    let sqrt = Math.sqrt(array.length);
+    console.log(sqrt);
+    
+    function matrixSum(array) {
+    let sum = 0;
+    // debugger
+    for (let i = sqrt - 1; i < array.length - 1; i += (sqrt - 1)) {
+        sum += array[i]
+    }
+    return sum;
+}
+console.log(matrixSum(array));
+*/
+
