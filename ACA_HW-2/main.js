@@ -232,6 +232,9 @@ function itemCounts(arr) {
         console.log();
         if (res[key] > Math.floor((array.length / 2))) return key
     }
+}
+console.log(itemCounts(array));
+*/
 
 /*
 // 10) gtnel trvats array i miji 3rd amenashate krknvox tive;
