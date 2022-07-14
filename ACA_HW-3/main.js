@@ -137,7 +137,7 @@ arrayOfObjectNames.forEach(function (elem) {
     return elem.log();
 });
 */
-    
+
 // 6) for above mentioned arrayOfObjectNames Return an array
 // of functions that when called would log each objects name
 // use Array.map and logArrayObjectNames function
@@ -157,109 +157,106 @@ const mappedFunc = arrayOfObjectNames.map(function (item) {
 console.log(mappedFunc);
 */
 // mappedFunc.forEach(i => i()); // this would print 1, 2, 3
-
-
-
-
-
-
-
+/*
 //7 please take a look at the following
 
 // this is just an example of object that you will still
 // need to create by calling CreateCar constructor
 
 // const exampleOfAlreadyCreatedObject = {
-//     id: 1,
-//     model: 'Toyota',
-//     year: '1996',
-//     color: 'red',
-//     driveTrain: '4x4',
-// }
-/*
-function CreateCar(id, model, year, color, driveTrain){
-    this.id = id;
-    this.model = model;
-    this.year = model;
-    this.color = color;
-    this.driveTrain =driveTrain;
-}
-
-// please take a look at the the inventory object and
-// implement the missing methods
-
-const inventory = {
+    //     id: 1,
+    //     model: 'Toyota',
+    //     year: '1996',
+    //     color: 'red',
+    //     driveTrain: '4x4',
+    // }
     
-    cars: [],
-
-    addCar(car) {
-        this.cars.push(car);
-    },
-
-    removeCar(id) {
-        // removeCar function would remove a car from cars array
-        // please implement it here
-        let newCars = [];
-        this.cars.forEach(item => {
-            if (item.id !== id) {
+    
+    function CreateCar(id, model, year, color, driveTrain) {
+        this.id = id;
+        this.model = model;
+        this.year = year;
+        this.color = color;
+        this.driveTrain = driveTrain;
+    }
+    
+    const inventory = {
+        cars: [],
+        
+        addCar(car) {
+            this.cars.push(car);
+            return this.cars;
+        },
+        
+        removeCar(id) {
+            
+            let newCars = [];
+            this.cars.forEach(item => {
+                if (item.id !== id) {
                 newCars.push(item);
             }
         })
         this.cars = newCars;
+        
+        this.cars.forEach((item, i) => {
+            if (item.id === id) {
+                this.cars.splice(i, 1);
+            }
+        });
     },
     
-    
-    listCars(){
-        // listCars function would list all the cars
-        // you simply need to log all the cars
+    listCars() {
+        console.log(this.cars);
+        
         this.cars.forEach(item => {
             console.log(item);
         })
+        
     },
+    
+    listCarsByConditionCallback(call) {
+        this.cars.forEach(function (item) {
+            if (call(item)) {
+                console.log(item);
+            }
+        }, this);
+    },
+};
 
-    listCarsByConditionCallback(){
-        // this function should accept a parameter conditionCallback,
-        // which is a function,
-        // the conditionCallback would be called on every car with
-        // that car passed to conditionCallback
-        // if conditionCallback returns true then the car is logged
-        // into console.
-        // please implement it
-        this.cars.every(item => item.model === 'BMW' && item.year === '2020')
-    }
-
-}
-
-inventory.addCar(new CreateCar(1, 'Toyota', '1996', 'red', '4x4'));
-inventory.addCar(new CreateCar(2, 'Mercedes', '2000', 'white', 'rear wheel drive'));
-inventory.addCar(new CreateCar(3, 'BMW', '2020', 'black', 'rear wheel drive'));
-inventory.removeCar(2);
-inventory.listCars();
-inventory.listCarsByConditionCallback();
-*/
-
-
-
-// 8)
-
-// Create a constructor function called Song. Song should take
-// in two arguments, title and artist, which should both be
-// added as properties when the Song constructor function is used.
-// The Song function should also have a method called
-// play When called, the play function should console.log
+inventory.addCar(new CreateCar(1, "Toyota", "1996", "red", "4x4"));
+inventory.addCar(
+    new CreateCar(2, "Mercedes", "2000", "white", "rear wheel drive")
+    );
+    inventory.addCar(new CreateCar(3, "BMW", "2020", "black", "rear wheel drive"));
+    inventory.removeCar(2);
+    inventory.listCars();
+    inventory.listCarsByConditionCallback(
+        (car) => car.model === "BMW" && car.year === "2020"
+        );
+        
+        */
+        // 8)
+        
+        // Create a constructor function called Song. Song should take
+        // in two arguments, title and artist, which should both be
+        // added as properties when the Song constructor function is used.
+        // The Song function should also have a method called
+        // play When called, the play function should console.log
 // the name of that specific song preceded by the word 'Playing:'.
 // NOTE that play function should be the same for all instances
 // of the Song constructor
-
-
+/*
 function SongConstructor(title, artist) {
-    this.artist = artist
-    this.title = title
-    let play = () => {
-        console.log(`playing ${this.title}`);
-    }
+    this.artist = artist;
+    this.title = title;
+    this.play = () => {
+        console.log(`playing ${this.title} ${this.artist}`);
+    };
 }
 
+let a = new SongConstructor("Addel", "Love In The Dark");
+a.play();
+*/
 // 9)
 
 // 1. Create a folder called Workshop_4 make
@@ -270,7 +267,7 @@ function SongConstructor(title, artist) {
 // create a branch named x_branch
 
 
-
+// git@github.com:Argam97/workshop-4.git
 
 
 // 10)
@@ -286,12 +283,12 @@ function SongConstructor(title, artist) {
 //
 // 5. delete the branch delete_me
 
-
-
+// git@github.com:Argam97/workShop_4.git
 
 
 // 11)
 /*
+*/
 const checkKnow = {
     name: 'checkKnow',
     surname: 'surname',
@@ -315,7 +312,15 @@ const checkKnow = {
 checkKnow.foo.logName();
 
 checkKnow.boo();
-*/
 // with a few words explain why this is happening Armenian or English.
+// qani vor checkKnow object e ev .foo.logName() dec. function e
+// objecti scopy vorpes scop yndunum ev hajord qaylum sksum e ay 
+// scopum man gal ir this => this.surname -y ev chgtnelu patjarov
+// veradarcnum e undefined
 
-
+// is 2 depqum qani vor boo(function)-e,
+// ev nersum this e voronum check(arrow-function)-y,
+// ev qani vor arrow function-y ir this parzum e ir 
+// haytararman jamanak u mer depqum boo()-i mej e u nra
+// thisy linum e boo(function)-i this-y isk boo(function)-i thisy
+// checkKnow object-y e ev veradarcnum e objecti name-y
