@@ -259,31 +259,53 @@ a.play();
 */
 // 9)
 
-// 1. Create a folder called Workshop_4 make
-// a git repository inside.
-//
-//
+// 1. Create a folder called Workshop_4 make a git
+// repository inside.
+// mkdir workshop-4-9
+// cd workshop-4-9
+// $ git status
+// $ git init
+
 // 2. without navigating to a different branch
 // create a branch named x_branch
 
+// touch git.txt
+// $ git add (. or git.txt)
+// $ git commit -m "homework-9"
+// $ git branch x_branch
 
-// git@github.com:Argam97/workshop-4.git
+
 
 
 // 10)
 // 1. Make a new folder called 'Workshop_4'
-//
-// 2. make that folder into git repo
-//
-// 2. create a branch called rename_me
-//
-// 3. create a branch called delete_me
-//
-// 4. rename the branch rename_me to renamed_branch
-//
-// 5. delete the branch delete_me
+// $ mkdir ws-4-10
+// $ cd ws-4-10
 
-// git@github.com:Argam97/workShop_4.git
+
+// 2. make that folder into git repo
+// $ git status
+// $ git init
+// touch git.txt
+// $ git add .
+// $ git commit -m "homework-10" 
+
+// 3. create a branch called rename_me
+// $ git // $ git branch rename_me
+
+
+// 4. create a branch called delete_me
+// $ git branch delete_me
+
+
+// 5. rename the branch rename_me to renamed_branch
+// $ git branch -m rename_me renamed_branch
+
+
+// 6. delete the branch delete_me
+// $ git branch -D delete_me
+
+
 
 
 // 11)
