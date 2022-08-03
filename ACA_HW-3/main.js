@@ -81,7 +81,7 @@ function CarConstructor(model, year) {
         return new CarConstructor(model, year)
     }
 }
-// console.log(new CarConstructor("merseddes", 2022));
+console.log(new CarConstructor("merseddes", 2022));
 console.log(CarConstructor('BMW', 2012));
 console.log(new CarConstructor('AUDI', 2022));
 */
@@ -311,29 +311,29 @@ a.play();
 // 11)
 /*
 */
-const checkKnow = {
-    name: 'checkKnow',
-    surname: 'surname',
-    foo: {
-        name: 'foo',
-        logName(){
-            console.log(this.surname);//    surname: 'surname',
-        }
-    },
-    boo(){
-        const obj = {
-            name: 'boo method',
-            check: () => {
-                console.log(this.name);
-            }
-        }
-        obj.check();
-    }
-}
+// const checkKnow = {
+//     name: 'checkKnow',
+//     surname: 'surname',
+//     foo: {
+//         name: 'foo',
+//         logName(){
+//             console.log(this.surname);//    surname: 'surname',
+//         }
+//     },
+//     boo(){
+//         const obj = {
+//             name: 'boo method',
+//             check: () => {
+//                 console.log(this.name);
+//             }
+//         }
+//         obj.check();
+//     }
+// }
 
-checkKnow.foo.logName();
+// checkKnow.foo.logName();
 
-checkKnow.boo();
+// checkKnow.boo();
 // with a few words explain why this is happening Armenian or English.
 // qani vor checkKnow object e ev .foo.logName() dec. function e
 // objecti scopy vorpes scop yndunum ev hajord qaylum sksum e ay 
