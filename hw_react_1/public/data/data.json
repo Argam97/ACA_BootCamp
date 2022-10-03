@@ -1,4 +1,4 @@
-const FlagsArrya = [
+[
     {
         "name": "United Arab Emirates",
         "img": "https://www.countryflagsapi.com/flagssvg/ae.svg"
@@ -1020,4 +1020,3 @@ const FlagsArrya = [
         "img": "https://www.countryflagsapi.com/flagssvg/zw.svg"
     }
 ]
-export default FlagsArrya
